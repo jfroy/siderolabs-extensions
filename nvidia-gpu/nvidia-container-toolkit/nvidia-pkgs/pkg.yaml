@@ -13,13 +13,13 @@ steps:
     # {{ if eq .ARCH "aarch64" }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
       - url: https://download.nvidia.com/XFree86/Linux-aarch64/{{ .NVIDIA_DRIVER_VERSION }}/NVIDIA-Linux-aarch64-{{ .NVIDIA_DRIVER_VERSION }}.run
         destination: nvidia.run
-        sha256: 8ba8d961457a241bcdf91b76d6fe2f36cb473c8bbdb02fb6650a622ce2e85b33
-        sha512: 706de7e53b81f909d8bc6a12a39c594754a164c49f5d23c7939dc3abcfc04f5d5b12b7d65762ae574582149a098f06ee5fe95be4f8ad1056a3307a6ce93f3c00
+        sha256: b896b76ae465307afc5b269c40bd8ccb279e6ea7d3ecae95534a91ecb1971572
+        sha512: 79b956ad890a096bfb00c9dd996cba0673200b1d61f702ea6c5c64ca3fe2cefdd61e2bc844fdb7b4668c2796af5399be51e6f511565c3799cf731de2a7e9efaa
     # {{ else }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
       - url: https://download.nvidia.com/XFree86/Linux-x86_64/{{ .NVIDIA_DRIVER_VERSION }}/NVIDIA-Linux-x86_64-{{ .NVIDIA_DRIVER_VERSION }}-no-compat32.run
         destination: nvidia.run
-        sha256: ffed07a30323fd6cf9caad3fb45e6259223135f6004d832511921a788f719ba6
-        sha512: f75c288b27a17ea8c63dac68cda01b94184b41332778df6a702d30d814c407c1e45f30bd7c81511508ace6560a16e79c24e8698f457aaee3ee1d03c57725ab27
+        sha256: 5a92545013649d6435d46fc8b5af617f4e3fdea78ee435e034c14bc47557c117
+        sha512: 9df55bd659c909d879a95e9b740487ba69c8b30be1f2c43be405c41899b3ad8eb493daaed9f0eca02d8a78729fcdd49e00c3d86e9c2b39a7644724bbf8195386
     # {{ end }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
     prepare:
       - |

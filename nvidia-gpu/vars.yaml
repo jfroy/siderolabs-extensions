@@ -1,12 +1,12 @@
 # only update if there's a matching fabric manager version
-# renovate: datasource=github-releases depName=nvidia/open-gpu-kernel-modules
-NVIDIA_DRIVER_VERSION: 535.129.03
-# renovate: datasource=git-tags depName=https://gitlab.com/nvidia/container-toolkit/container-toolkit.git
-CONTAINER_TOOLKIT_VERSION: v1.14.6
-CONTAINER_TOOLKIT_REF: 5605d191332dcfeea802c4497360d60a65c7887e
-# renovate: datasource=git-tags depName=https://gitlab.com/nvidia/container-toolkit/libnvidia-container.git
-LIBNVIDIA_CONTAINER_VERSION: v1.14.6
-LIBNVIDIA_CONTAINER_REF: d2eb0afe86f0b643e33624ee64f065dd60e952d4
+  # cannot use renovate from nvidia/open-gpu-kernel-modules as it will pick up all sorts of pre-release versions
+NVIDIA_DRIVER_VERSION: 550.90.07
+# renovate: datasource=github-releases depName=NVIDIA/nvidia-container-toolkit
+CONTAINER_TOOLKIT_VERSION: v1.16.1
+CONTAINER_TOOLKIT_REF: a470818ba7d9166be282cd0039dd2fc9b0a34d73
+# renovate: datasource=github-releases depName=NVIDIA/libnvidia-container
+LIBNVIDIA_CONTAINER_VERSION: v1.16.1
+LIBNVIDIA_CONTAINER_REF: 4c2494f16573b585788a42e9c7bee76ecd48c73d
 # renovate: datasource=docker versioning=docker depName=cgr.dev/chainguard/wolfi-base
 WOLFI_BASE_REF: sha256:3d6dece13cdb5546cd03b20e14f9af354bc1a56ab5a7b47dca3e6c1557211fcf
 # renovate: datasource=git-tags extractVersion=^glibc-(?<version>.*)$ depName=https://sourceware.org/git/glibc.git

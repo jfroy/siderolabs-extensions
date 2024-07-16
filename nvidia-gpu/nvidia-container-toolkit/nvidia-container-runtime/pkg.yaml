@@ -10,10 +10,10 @@ dependencies:
   - image: cgr.dev/chainguard/wolfi-base@{{ .WOLFI_BASE_REF }}
 steps:
   - sources:
-      - url: https://gitlab.com/nvidia/container-toolkit/container-toolkit/-/archive/{{ .CONTAINER_TOOLKIT_VERSION }}/container-toolkit-{{ .CONTAINER_TOOLKIT_VERSION }}.tar.gz
+      - url: https://github.com/NVIDIA/nvidia-container-toolkit/archive/refs/tags/{{ .CONTAINER_TOOLKIT_VERSION }}.tar.gz
         destination: container-toolkit.tar.gz
-        sha256: 5284f689b8c55181cf215444dde3c0171cff5edde183f060f1e7e0611c055ce6
-        sha512: 49d87b316db0002d0b79c5f6c31fff78f3e54bf0310c396d7fc8d88b5d9f7ec4bd629547983a25530d9a709b872907c5941892733fef81df99a6764a00f6b229
+        sha256: 38a193444e0342c0a2c0d3664403e2c341eb77f1461b3f9172fd93c04de82165
+        sha512: 691d4fc47ea60b730ec491b333aa8118bcfd62cdab20a42b84155c6a13484d920e758435b5029bbae4fbefce82352aa5764f1554992682f689c95615809fb83c
     env:
       GIT_COMMIT: {{ substr 0 7 .CONTAINER_TOOLKIT_REF }} # build is using short sha
     prepare:

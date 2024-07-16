@@ -28,10 +28,10 @@ dependencies:
     from: /rootfs
 steps:
   - sources:
-      - url: https://gitlab.com/nvidia/container-toolkit/libnvidia-container/-/archive/{{ .LIBNVIDIA_CONTAINER_VERSION }}/libnvidia-container-{{ .LIBNVIDIA_CONTAINER_VERSION }}.tar.gz
+      - url: https://github.com/NVIDIA/libnvidia-container/archive/refs/tags/{{ .LIBNVIDIA_CONTAINER_VERSION }}.tar.gz
         destination: libnvidia-container.tar.gz
-        sha256: 13a626b6fdfe1d98be754af5b80b59a8887dd4250ae199919a7a1ed513e03a3e
-        sha512: c9dd1fcf0534c53259a9f23a07ad89f17933484bea903a89bcb3abd792c3dee1a340f9e7c42047e90969ca8eea7e7c4a5e7dba759a7a5871d2aac4bc01f61ab8
+        sha256: cbc1dda7ee90b8b729c5f178292cd07b421863015d84b84c37e69c8d580ab3ff
+        sha512: b304c284c5ab0c3544362307dc16ffcca8d34497e4356a520dc6da81a86a62b2a262b528cba559bb0d7a3addf018c3b50b6cb78669c82c1b4acae159e5922548
     env:
       SOURCE_DATE_EPOCH: {{ .BUILD_ARG_SOURCE_DATE_EPOCH }}
       REVISION: {{ .LIBNVIDIA_CONTAINER_REF }}
