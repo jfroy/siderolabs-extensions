@@ -11,11 +11,13 @@ dependencies:
   - image: cgr.dev/chainguard/wolfi-base@{{ .WOLFI_BASE_REF }}
 steps:
   - sources:
-      - url: https://src.fedoraproject.org/lookaside/pkgs/glibc/glibc-{{ .GLIBC_VERSION }}.tar.xz/sha512/818f58172a52815b4338ea9f2a69ecaa3335492b9f8f64cbf8afb24c0d737982341968ecd79631cae3d3074ab0ae4bc6056fc4ba3ffe790849dc374835cd57e2/glibc-{{ .GLIBC_VERSION }}.tar.xz
+      - url: https://src.fedoraproject.org/lookaside/pkgs/glibc/glibc-{{ .VERSION }}.tar.xz/sha512/818f58172a52815b4338ea9f2a69ecaa3335492b9f8f64cbf8afb24c0d737982341968ecd79631cae3d3074ab0ae4bc6056fc4ba3ffe790849dc374835cd57e2/glibc-{{ .VERSION }}.tar.xz
         destination: glibc.tar.xz
         sha256: f77bd47cf8170c57365ae7bf86696c118adb3b120d3259c64c502d3dc1e2d926
         sha512: 818f58172a52815b4338ea9f2a69ecaa3335492b9f8f64cbf8afb24c0d737982341968ecd79631cae3d3074ab0ae4bc6056fc4ba3ffe790849dc374835cd57e2
     prepare:
+      - |
+        sed -i 's#$VERSION#{{ .VERSION }}#' /pkg/manifest.yaml
       - |
         tar -xf glibc.tar.xz --strip-components=1
 
@@ -34,13 +36,14 @@ steps:
         make -j $(nproc)
     install:
       - |
-        mkdir -p /rootfs/lib64
+        mkdir -p /rootfs/lib64 /rootfs/sbin
 
         cd build
         make install DESTDIR=/rootfs
 
         cp /pkg/ld.so.conf /rootfs/usr/local/glibc/etc/ld.so.conf
         ln -s /usr/local/glibc/lib/ld-linux-x86-64.so.2 /rootfs/lib64/ld-linux-x86-64.so.2
+        ln -s /usr/local/glibc/sbin/ldconfig /rootfs/sbin/ldconfig
 
         # cleanup
         rm -rf /rootfs/usr/local/glibc/include
@@ -49,3 +52,5 @@ steps:
 finalize:
   - from: /rootfs
     to: /rootfs
+  - from: /pkg/manifest.yaml
+    to: /

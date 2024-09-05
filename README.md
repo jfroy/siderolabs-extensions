@@ -79,6 +79,7 @@ cosign verify --certificate-identity-regexp '@siderolabs\.com$' --certificate-oi
 | Name                            | Image                                                                                                 | Description                 | Version Format  |
 | ------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------------------- | --------------- |
 | [binfmt-misc](misc/binfmt-misc) | [ghcr.io/siderolabs/binfmt-misc](https://github.com/siderolabs/extensions/pkgs/container/binfmt-misc) | Miscellaneous Binary Format | `talos version` |
+| [glibc](misc/glibc)             | [ghcr.io/siderolabs/glibc](https://github.com/siderolabs/extensions/pkgs/container/glibc)             | glibc                       | `talos version` |
 
 ### Network
 
