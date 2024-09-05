@@ -23,6 +23,7 @@ dependencies:
   # gasket-driver can be ignored from reproducibility test since it's kernel modules copied from pkgs
   # - stage: gasket-driver
 
+  - stage: glibc
   - stage: gvisor
   - stage: hello-world-service
 
