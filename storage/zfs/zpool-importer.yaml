@@ -9,7 +9,7 @@ container:
   entrypoint: /usr/local/sbin/zpool
   args:
     - import
-    - -fa
+    - -fal
   mounts:
     # ld-musl-x86_64.so.1
     - source: /lib
