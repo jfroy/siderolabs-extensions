@@ -16,4 +16,4 @@ vars:
   LINUX_DVB_FIRMWARE: 0.0.51
 
 labels:
-  org.opencontainers.image.source: https://github.com/siderolabs/extensions
+  org.opencontainers.image.source: https://github.com/jfroy/siderolabs-extensions
