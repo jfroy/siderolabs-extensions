@@ -44,13 +44,11 @@ spec:
     - nfsd
     - nfsrahead
     - nut-client
-    - nvidia-container-toolkit-lts
-    - nvidia-container-toolkit-production
+    - nvidia-driver-lts
+    - nvidia-driver-production
     - nvidia-fabricmanager-lts
     - nvidia-fabricmanager-production
     - nvidia-gdrdrv-device
-    - nvidia-open-gpu-kernel-modules-lts
-    - nvidia-open-gpu-kernel-modules-production
     - nvme-cli
     - soci-snapshotter
     - panfrost
