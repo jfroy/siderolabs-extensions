@@ -26,12 +26,12 @@ spec:
     - mdadm
     - mei
     - nut-client
-    - nvidia-container-toolkit-lts
-    - nvidia-container-toolkit-production
     - nvidia-fabricmanager-lts
     - nvidia-fabricmanager-production
-    - nvidia-open-gpu-kernel-modules-lts
-    - nvidia-open-gpu-kernel-modules-production
+    - nvidia-driver-lts
+    - nvidia-driver-production
+    - nvidia-driver-proprietary-lts
+    - nvidia-driver-proprietary-production
     - qemu-guest-agent
     - qlogic-firmware
     - realtek-firmware
