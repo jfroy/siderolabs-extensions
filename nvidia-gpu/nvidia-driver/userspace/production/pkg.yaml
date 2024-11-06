@@ -15,8 +15,8 @@ steps:
     # {{ else }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
       - url: https://us.download.nvidia.com/tesla/{{ .NVIDIA_DRIVER_PRODUCTION_VERSION }}/NVIDIA-Linux-x86_64-{{ .NVIDIA_DRIVER_PRODUCTION_VERSION }}.run
         destination: nvidia.run
-        sha256: 51acf579d5a9884f573a1d3f522e7fafa5e7841e22a9cec0b4bbeae31b0b9733
-        sha512: b8c2cdc918ec74b44517fc181f9eb08ea44d0d9a53f221c0aa243e34872203721a9a7fb27628d35e3028a6aa68917abd2962cc13d5d4b09e92866e14678567a4
+        sha256: f2932c92fadd43c5b2341be453fc4f73f0ad7185c26bb7a43fbde81ae29f1fe3
+        sha512: 97137160b64928ff84fd6145a0ebc209c045d6a07ccc53ec6df6ba1fda2ad72038eda7ecdc0a0178a2628aa4e18819a9b3ff3b693b22bdc9de543be0a968f8aa
     # {{ end }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
     prepare:
       - |
