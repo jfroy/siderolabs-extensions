@@ -10,8 +10,8 @@ steps:
     # {{ if eq .ARCH "aarch64" }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
       - url: https://us.download.nvidia.com/tesla/{{ .NVIDIA_DRIVER_PRODUCTION_VERSION }}/NVIDIA-Linux-aarch64-{{ .NVIDIA_DRIVER_PRODUCTION_VERSION }}.run
         destination: nvidia.run
-        sha256: b896b76ae465307afc5b269c40bd8ccb279e6ea7d3ecae95534a91ecb1971572
-        sha512: 79b956ad890a096bfb00c9dd996cba0673200b1d61f702ea6c5c64ca3fe2cefdd61e2bc844fdb7b4668c2796af5399be51e6f511565c3799cf731de2a7e9efaa
+        sha256: b3c64054abd1357a63c5162a337139a2cb3915da96fadbf5a900b6a438df1beb
+        sha512: 8df331104f3d63d4aaeeace412a986a93355be3ce69a968fbc12b7d0b21a34e71cdf37758c23a392c358a1c3ba1da21115002f55017c2a829c7bb4d41536e543
     # {{ else }} This in fact is YAML comment, but Go templating instruction is evaluated by bldr
       - url: https://us.download.nvidia.com/tesla/{{ .NVIDIA_DRIVER_PRODUCTION_VERSION }}/NVIDIA-Linux-x86_64-{{ .NVIDIA_DRIVER_PRODUCTION_VERSION }}.run
         destination: nvidia.run
