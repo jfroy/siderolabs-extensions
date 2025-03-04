@@ -28,6 +28,7 @@ spec:
     - lldpd
     - mdadm
     - mei
+    - mellanox-mstflint
     - metal-agent
     - nut-client
     - nvidia-fabricmanager-lts

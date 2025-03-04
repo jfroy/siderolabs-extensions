@@ -1,6 +1,6 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED, PLEASE DO NOT EDIT.
 #
-# Generated on 2025-03-11T16:32:14Z by kres ec5ec04.
+# Generated on 2025-03-04T19:11:13Z by kres 1281806.
 
 # common variables
 
@@ -79,6 +79,7 @@ TARGETS += kata-containers
 TARGETS += lldpd
 TARGETS += mdadm
 TARGETS += mei
+TARGETS += mellanox-mstflint
 TARGETS += metal-agent
 TARGETS += nut-client
 TARGETS += nvidia-fabricmanager-lts
