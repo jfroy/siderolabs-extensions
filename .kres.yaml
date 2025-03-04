@@ -32,6 +32,7 @@ spec:
     - lldpd
     - mdadm
     - mei
+    - mellanox-mstflint
     - metal-agent
     - nebula
     - newt
