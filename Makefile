@@ -85,6 +85,7 @@ TARGETS += kata-containers
 TARGETS += lldpd
 TARGETS += mdadm
 TARGETS += mei
+TARGETS += mellanox-mstflint
 TARGETS += metal-agent
 TARGETS += nebula
 TARGETS += nfsd
