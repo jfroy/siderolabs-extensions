@@ -21,7 +21,8 @@ steps:
 
         ./configure \
           --prefix=/usr/local \
-          --disable-gssapi
+          --disable-gssapi \
+          --enable-rpcdb
     build:
       - |
         make -j $(nproc)
